@@ -37,9 +37,9 @@ public class UniqueIdentifierTest {
                 uniqueIdentifier.getUniqueIdentifier(),
                 uniqueIdentifier.getUniqueIdentifier(),
                 uniqueIdentifier.getUniqueIdentifier());
-        Map<String, Long> ocurrencias = out.stream().collect(
+        Map<String, Long> currencies = out.stream().collect(
                 Collectors.groupingBy(Function.identity(), Collectors.counting()));
-        ocurrencias.forEach((key, value) ->
+        currencies.forEach((key, value) ->
                 assertTrue(value == 1));
     }
 }

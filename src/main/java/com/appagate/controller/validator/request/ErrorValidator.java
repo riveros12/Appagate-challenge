@@ -5,20 +5,26 @@ import com.appagate.domain.exception.AppagateException;
 import com.appagate.domain.exception.ErrorCode;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.ObjectError;
-
+/**
+ * @author oscarriveros
+ */
 public class ErrorValidator {
 
     /**
      * validacionErrorApp
+     *
      * @param errors
      * @throws AppagateException
      */
-    public static void validationionErrorApp (BindingResult errors) throws AppagateException {
-        if ( errors.hasErrors() ){
+    public static void validationionErrorApp(BindingResult errors) throws AppagateException {
+        if (errors.hasErrors()) {
             StringBuilder stringBuilder = new StringBuilder();
             stringBuilder.append(ErrorCode.STATUS_BAD.getDescripcion());
-            for (ObjectError error :errors.getAllErrors()){
+            for (ObjectError error : errors.getAllErrors()) {
                 stringBuilder.append("\n" + error.getDefaultMessage());
-            }throw  new AppagateException(stringBuilder.toString(), new IllegalArgumentException("Bad arguments to start service"), ErrorCode.STATUS_BAD );}}
+            }
+            throw new AppagateException(stringBuilder.toString(), new IllegalArgumentException("Bad arguments to start service"), ErrorCode.STATUS_BAD);
+        }
+    }
 
 }
