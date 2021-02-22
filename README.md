@@ -10,7 +10,8 @@ Challenge Software Developer: Reto para Software Developer Appagate
 5) Comando probar
     * docker run -p 8080 <IMAGE_ID> 
 7) Comando para ejecutar contenedor
-
+   * docker run -i -t  docker-spring-boot -d docker-spring-boot-container
+   * docker run -i -t  1f3801711576 -d appagate-container 
 9) CURL para probar la API
 
   * APIKEY(Session) (GET)
@@ -24,9 +25,9 @@ Challenge Software Developer: Reto para Software Developer Appagate
   curl -v '{"keyidentifier”:”0338278096946750”,”operator”:"sum"}’ -H 'Content-Type: application/json' localhost:8080/appagate/result
   
 11) Diagrama de Arquitectura
-
+    * Correo
 13) Diagrama de estrategia CI/DI
-
+    * Correo
 14) Comandos pruebas Unitarias
     * mvn clean test
     
