@@ -10,6 +10,7 @@ import org.springframework.context.annotation.ComponentScan;
 		"com.appagate.business",
 		"com.appagate.app",
 		"com.appagate.domain.service",
+		"com.appagate.domain.impl",
 		"com.appagate.domain.exception"
 })
 public class AppagateChallengeApplication {

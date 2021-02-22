@@ -9,7 +9,11 @@ public enum ErrorCode {
 
     STATUS_BAD("500", "Bad"),
 
-    EXCEPTION_CALCULATE("10", "Error performing calculation ");
+    ERROR_GENERATED_APIKEY("9","Error generating api_key "),
+
+    EXCEPTION_CALCULATE("10", "Error performing calculation "),
+
+    ERROR_VALIDATION_API_KEY("11","Error validating api key");
 
     private String description;
     private String code;
