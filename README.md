@@ -3,6 +3,7 @@ Challenge Software Developer: Reto para Software Developer Appagate
 # Comandos
 
 1) Comando para construir & empaquetar
+docker build -f Dockerfile -t docker-spring-boot .
 
 3) Comando para dockerizar
 
