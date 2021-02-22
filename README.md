@@ -3,29 +3,32 @@ Challenge Software Developer: Reto para Software Developer Appagate
 # Comandos
 
 1) Comando para construir & empaquetar
-docker build -f Dockerfile -t docker-spring-boot .
-
+    * docker build -f Dockerfile -t docker-spring-boot .
 3) Comando para dockerizar
-
+    * sudo docker tag docker-spring-boot:latest scrriveros254/appagate:appagate
+    * docker push scrriveros254/appagate:appagate
 5) Comando probar
-
+    * docker run -p 8080 <IMAGE_ID> 
 7) Comando para ejecutar contenedor
 
 9) CURL para probar la API
-  APIKEY(Session) (GET)
+
+  * APIKEY(Session) (GET)
   curl -v localhost:8080/appagate/newappid
-  Agregar Operando (POST)
+  
+  * Agregar Operando (POST)
   curl -d '{"keyidentifier”:”0338278096946750”,”value”:2.0}’ -H 'Content-Type: application/json' localhost:8080/appagate/add/value
-  Obtener Resultado
+  
+  * Obtener Resultado
   Operator: tiene disponible-> SUM,SUBTRACTION,MULTIPLICATION,DIVISION,POW
   curl -v '{"keyidentifier”:”0338278096946750”,”operator”:"sum"}’ -H 'Content-Type: application/json' localhost:8080/appagate/result
+  
 11) Diagrama de Arquitectura
 
 13) Diagrama de estrategia CI/DI
 
 14) Comandos pruebas Unitarias
-
-    mvn clean test
+    * mvn clean test
     
 # Ejemplo de Ejecución
 
