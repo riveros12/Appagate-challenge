@@ -26,20 +26,24 @@ Challenge Software Developer: Reto para Software Developer Appagate
 
 # Ejemplo de Ejecución
 
-a. Se obtiene la sesión inicial <número unico> (GET)
+1) Se obtiene la sesión inicial <número unico> (GET)
 localhost:8080/appagate/newappid
-b. Se agregan los operandos cuales quiera (POST)
+2) Se agregan los operandos cuales quiera (POST)
 localhost:8080/appagate/add/value
+
 {
     "keyidentifier":"5538813573420744",
     "value":23.0
 }
-c.Se solicta el calculo que se desee para lo que estan disponibles; SUM,SUBTRACTION,MULTIPLICATION,DIVISION,POW
+
+3) Se solicta el calculo que se desee para lo que estan disponibles; SUM,SUBTRACTION,MULTIPLICATION,DIVISION,POW
 localhost:8080/appagate/result
+
 {
     "keyidentifier":"5538813573420744",
     "operator":"SUM"
 }
+
 # Escalabilidad & Elastibilidad
 
 1) Una opción es utilizar cache para almacenar las operaciones complejas y así evitar la degradación del servcio con el tiempo 
