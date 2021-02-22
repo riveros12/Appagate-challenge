@@ -58,8 +58,10 @@ localhost:8080/appagate/result
    
 # Thread-safety
 
-1) Una opción es utilizar multi hilo para la ejecución de procesos simultaneos(No se implemento)
-2) Singleton me permite utilizar instancias ya creadas reduciendo el costo creando objetos ante la alta concurrencia
+1) Ante una alta concurrencia se utiliza SYNCRONIZED para saber si un bloque esta siendo utilizado en otro proceso, si lo esta queda suspendido el proceso
+   hasta que quede libre.
+3) Una opción es utilizar multi hilo para la ejecución de procesos simultaneos(No se implemento)
+4) Singleton me permite utilizar instancias ya creadas reduciendo el costo creando objetos ante la alta concurrencia
 
 
 
