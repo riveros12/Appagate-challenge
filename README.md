@@ -24,6 +24,8 @@ Challenge Software Developer: Reto para Software Developer Appagate
 
 14) Comandos pruebas Unitarias
 
+    mvn clean test
+    
 # Ejemplo de Ejecución
 
 1) Se obtiene la sesión inicial <número unico> (GET)
