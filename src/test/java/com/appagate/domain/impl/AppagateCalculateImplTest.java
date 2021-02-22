@@ -4,7 +4,6 @@ import com.appagate.controller.request.OperationRequestDTO;
 import com.appagate.controller.request.ResultRequestDTO;
 import org.junit.Before;
 import org.junit.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -52,7 +51,6 @@ public class AppagateCalculateImplTest {
         resultRequestDTO.setOperator("SUM");
         resultRequestDTO.setKeyidentifier(apikey);
         Double result=appagateCalculate.getResult(resultRequestDTO);
-        System.out.println(result);
         assertThat(result.doubleValue(),is(3.6));
     }
 
@@ -75,7 +73,6 @@ public class AppagateCalculateImplTest {
         resultRequestDTO.setOperator("SUM");
         resultRequestDTO.setKeyidentifier(apikey);
         Double result=appagateCalculate.getResult(resultRequestDTO);
-        System.out.println(result);
         assertThat(result.doubleValue(),is(3.6));
     }
 }

@@ -12,11 +12,24 @@ public class UniqueIdentifier {
 
     private static AtomicLong iterator = new AtomicLong(-1);
 
+
+    public static UniqueIdentifier uniqueIdentifier;
+
+
+    public synchronized static UniqueIdentifier getUniqueIdentifier(){
+        if(uniqueIdentifier==null){
+            uniqueIdentifier=new UniqueIdentifier();
+        }
+        return uniqueIdentifier;
+    }
+
+    private UniqueIdentifier(){}
+
     /**
      * getUniqueIdentifier
      * @return
      */
-    public String getUniqueIdentifier() {
+    public String getUniqueIdentifierkey() {
         int firstLetter = ThreadLocalRandom.current().nextInt(0, (endians.length));
         Character secondLetter = threadLocal.get();
         if (secondLetter == null) {

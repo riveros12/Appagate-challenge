@@ -30,7 +30,7 @@ public class AppagateCalculateImpl implements AppagateCalculateService {
     private HashMap<String, List<Double>> data;
 
     AppagateCalculateImpl(){
-        identifier= new UniqueIdentifier();
+        identifier= UniqueIdentifier.getUniqueIdentifier();
         operator= new Adapter();
         data=new HashMap<>();
     }
@@ -41,7 +41,7 @@ public class AppagateCalculateImpl implements AppagateCalculateService {
         String apiKey="";
         List<Double> listValuesOpera=new ArrayList<>();
         try{
-            apiKey=this.identifier.getUniqueIdentifier();
+            apiKey=this.identifier.getUniqueIdentifierkey();
             this.data.put(apiKey,listValuesOpera);
         }catch (Exception ex){
             throw new AppagateException(ErrorCode.ERROR_GENERATED_APIKEY.getDescripcion(), ex, ErrorCode.ERROR_GENERATED_APIKEY);

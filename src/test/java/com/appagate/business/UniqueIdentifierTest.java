@@ -11,6 +11,7 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 
+import static com.appagate.business.UniqueIdentifier.uniqueIdentifier;
 import static junit.framework.TestCase.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
@@ -19,24 +20,24 @@ import static org.junit.Assert.assertTrue;
  */
 public class UniqueIdentifierTest {
 
-    private UniqueIdentifier uniqueIdentifier;
+
 
     private String resultId;
 
     @Test
     public void getUniqueIdentifierTest() {
-        uniqueIdentifier = new UniqueIdentifier();
-        this.resultId = uniqueIdentifier.getUniqueIdentifier();
+        UniqueIdentifier uniqueIdentifier = UniqueIdentifier.getUniqueIdentifier();
+        this.resultId = uniqueIdentifier.getUniqueIdentifierkey();
         assertNotNull(this.resultId);
     }
 
     @Test
     public void getUniqueIdentifierOnlyResultTest() {
-        uniqueIdentifier = new UniqueIdentifier();
-        List<String> out = Arrays.asList(uniqueIdentifier.getUniqueIdentifier(),
-                uniqueIdentifier.getUniqueIdentifier(),
-                uniqueIdentifier.getUniqueIdentifier(),
-                uniqueIdentifier.getUniqueIdentifier());
+        uniqueIdentifier = UniqueIdentifier.getUniqueIdentifier();
+        List<String> out = Arrays.asList(uniqueIdentifier.getUniqueIdentifierkey(),
+                uniqueIdentifier.getUniqueIdentifierkey(),
+                uniqueIdentifier.getUniqueIdentifierkey(),
+                uniqueIdentifier.getUniqueIdentifierkey());
         Map<String, Long> currencies = out.stream().collect(
                 Collectors.groupingBy(Function.identity(), Collectors.counting()));
         currencies.forEach((key, value) ->
